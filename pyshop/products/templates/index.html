@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pyshop HomePage</title>
+</head>
+<body >
+{% block content %}
+<h1 style="color: blue"><button type="button" class="btn btn-primary"> <h1>Products</h1></button></h1>
+<div class="row">
+    {% for product in products %}
+    <div class="col"  >
+        <div class="card" style="width: 18rem;" style="padding: 10px;">
+            <div class="card-body">
+                <h5 class="card-title" style="borders: 10px">{{ product.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${{ product.price }}</h6>
+                <p class="card-text"> </p>
+                <a href="#" class="car>d-link"><button type="button" class="btn btn-primary">Add to Cart</button></a>
+                <a href="http://127.0.0.1:8000/home/products/offers/" class="card-link"><button type="button" class="btn btn-secondary">See Offers</button></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<form style="padding: 20px;">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help Page</title>
+</head>
+<body style="background-color: grey">
+{% block content %}
+<div class="input-group mb-3" style="padding: 10px">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Subject</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group" style="padding: 10px">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Description</span>
+  </div>
+  <textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+{% endblock %}
+</body>
+</html>

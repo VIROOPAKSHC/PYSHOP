@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offers Page</title>
+</head>
+<body style="background-color: lightyellow">
+{% block content %}
+{% for offer in offers %}
+<div class="card">
+    <h5 class="card-header">Featured</h5>
+    <div class="card-body">
+        <h5 class="card-title">{{ offer.code }}</h5>
+        <p class="card-text"> {{ offer.description }} </p>
+        <a href="#" class="btn btn-primary">Use it!</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
